@@ -15,10 +15,3 @@ resource "google_cloud_run_service" "hello" {
     latest_revision = true
   }
 }
-
-resource "google_cloud_run_service_iam_member" "public_invoker" {
-  service  = google_cloud_run_service.hello.name
-  location = google_cloud_run_service.hello.location
-  role     = "roles/run.invoker"
-  member   = "allUsers"
-}
