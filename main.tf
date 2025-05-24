@@ -5,7 +5,7 @@ provider "google" {
 
 module "cloud_run" {
   source       = "./modules/cloud-run"
-  service_name = "hello-service"
+  service_name = var.service_name
   location     = var.region
   image        = "gcr.io/cloudrun/hello"
 }
