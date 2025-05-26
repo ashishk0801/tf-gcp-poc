@@ -1,7 +1,21 @@
+terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "~> 4.48.0"
+      project = var.project_id
+      region  = var.region
+    }
+  }
+}
+
 provider "google" {
   project = var.project_id
   region  = var.region
+  impersonate_service_account = var.gcp_service_account
 }
+
+
 
 module "cloud_run" {
   source       = "./modules/cloud-run"
