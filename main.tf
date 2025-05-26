@@ -9,3 +9,4 @@ module "cloud_run" {
   location     = var.region
   image        = "us-docker.pkg.dev/cloudrun/container/hello"
 }
+
