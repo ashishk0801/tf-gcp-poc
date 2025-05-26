@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket  = "tf-statefiles001"
+    bucket  = "tf-statefile001"
     prefix  = "terraform/state"
   }
 }
