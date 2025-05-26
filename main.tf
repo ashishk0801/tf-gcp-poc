@@ -7,5 +7,5 @@ module "cloud_run" {
   source       = "./modules/cloud-run"
   service_name = var.service_name
   location     = var.region
-  image        = "gcr.io/cloudrun/hello"
+  image        = "us-docker.pkg.dev/cloudrun/container/hello"
 }
